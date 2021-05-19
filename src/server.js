@@ -1,6 +1,8 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 
+const { widgets } = require('./widgets');
+
 // Create the server
 const app = express();
 
@@ -10,10 +12,13 @@ app.use(bodyParser.json());
 
 // Routes
 app.post('/', (req, res) => {
+
+    const { pageId, slotId } = req.body;
+
     res.json({
-        pageId: req.body.pageId,
-        slotId: req.body.slotId,
-        widget: 'nav'
+        pageId,
+        slotId,
+        widget: widgets[pageId][slotId]
     });
 });
 
