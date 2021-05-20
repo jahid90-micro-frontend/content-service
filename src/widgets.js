@@ -1,14 +1,17 @@
 module.exports = {
     widgets: {
         '1': {
-            '1': 'nav',
-            '2': 'sidebar',
-            '3': 'content'
+            'nav': 'nav',
+            '1': 'banner',
+            '2': 'content',
+            'footer': 'footer'
         },
         '2': {
-            '1': 'nav',
-            '2': 'about'
+            'nav': 'nav',
+            '1': 'about',
+            'footer': 'footer'
         }
     }
 }
 
+// widgets[pageId][widgetId] = widgetName
