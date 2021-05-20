@@ -3,7 +3,7 @@ module.exports = {
         '1': {
             'nav': 'nav',
             '1': 'banner',
-            '2': 'content',
+            '2': 'home',
             'footer': 'footer'
         },
         '2': {
