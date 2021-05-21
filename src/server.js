@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const morgan = require('morgan');
 
 const { widgets } = require('./widgets');
 
@@ -7,6 +8,8 @@ const { widgets } = require('./widgets');
 const app = express();
 
 // Configure the server
+app.use(morgan('tiny'));
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

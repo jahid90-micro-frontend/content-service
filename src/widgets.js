@@ -10,6 +10,11 @@ module.exports = {
             'nav': 'nav',
             '1': 'about',
             'footer': 'footer'
+        },
+        '404': {
+            'nav': 'nav',
+            '1': 'not-found',
+            'footer': 'footer'
         }
     }
 }
