@@ -16,6 +16,11 @@ module.exports = {
             '1': 'counter',
             'footer': 'footer'
         },
+        '4': {
+            'nav': 'nav',
+            '1': 'todos',
+            'footer': 'footer'
+        },
         '404': {
             'nav': 'nav',
             '1': 'not-found',
