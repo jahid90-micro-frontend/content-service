@@ -11,11 +11,6 @@ module.exports = {
             '1': 'about',
             'footer': 'footer'
         },
-        '3': {
-            'nav': 'nav',
-            '1': 'counter',
-            'footer': 'footer'
-        },
         '4': {
             'nav': 'nav',
             '1': 'todos',
