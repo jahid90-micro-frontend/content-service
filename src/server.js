@@ -17,17 +17,16 @@ app.use(bodyParser.json());
 app.post('/', (req, res) => {
 
     const { pageId, slotId } = req.body;
+    const response = widgets[pageId][slotId];
+
+    console.debug(`Request: {pageId: ${pageId}, slotId: ${slotId}}`);
+    console.debug(`Response: ${JSON.stringify(response)}`);
 
     res.json({
         pageId,
         slotId,
-        widget: widgets[pageId][slotId]
+        widget: response
     });
 });
 
-// Start the server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`server is up and running on port: ${port}`);
-});
-
+module.exports = app;
