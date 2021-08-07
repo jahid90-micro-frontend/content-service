@@ -2,6 +2,8 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const morgan = require('morgan');
 
+const { trace } = require('@jahiduls/lib-tracing');
+
 const { widgets } = require('./widgets');
 
 // Create the server
@@ -17,7 +19,7 @@ app.use(bodyParser.json());
 app.post('/', (req, res) => {
 
     const { pageId, slotId } = req.body;
-    const response = widgets[pageId][slotId];
+    const response = tracedFetchSlotContent(pageId, slotId);
 
     console.debug(`Request: {pageId: ${pageId}, slotId: ${slotId}}`);
     console.debug(`Response: ${JSON.stringify(response)}`);
@@ -28,5 +30,8 @@ app.post('/', (req, res) => {
         widget: response
     });
 });
+
+const fetchSlotContent = (pageId, slotId) => widgets[pageId][slotId];
+const tracedFetchSlotContent = trace(fetchSlotContent, 'fetch-slot-content');
 
 module.exports = app;
