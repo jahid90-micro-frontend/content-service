@@ -26,6 +26,14 @@ module.exports = {
             '1': 'not-found',
             'footer': 'footer'
         }
+    },
+    modules: {
+        common: {
+            name: 'common',
+            content: {
+                uri: 'common-modules/index.html'
+            }
+        }
     }
 }
 
