@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@jahiduls/lib-tracing": "^1.0.4",
-    "express": "^4.17.1",
+    "express": "^5.0.0",
     "morgan": "^1.10.0"
   }
 }
